@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clue 2</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:#000; color:white;">
+
+<h1>🔍 Clue 2</h1>
+<p>What has keys but can't open locks?</p>
+
+<input id="answer">
+<br><br>
+<button onclick="check()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function check() {
+  let ans = document.getElementById("answer").value.toLowerCase();
+
+  if(ans === "piano") {
+    window.location = "win.html";
+  } else {
+    document.getElementById("msg").innerText = "Wrong! Try again.";
+  }
+}
+</script>
+
+</body>
+</html>
