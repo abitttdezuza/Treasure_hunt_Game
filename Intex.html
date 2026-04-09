@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Treasure Hunt Lobby</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      width: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background: gold;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: orange;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .rules {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🏆 Treasure Hunt</h1>
+  <p>Enter your name to begin</p>
+
+  <input type="text" id="playerName" placeholder="Your Name">
+  <br>
+  <button onclick="startGame()">Start Game</button>
+
+  <div class="rules">
+    <p>🔍 Solve clues to find the treasure</p>
+    <p>⏱️ Time is limited</p>
+    <p>💡 Think smart, not hard</p>
+  </div>
+
+  <p id="error" style="color:red;"></p>
+</div>
+
+<script>
+function startGame() {
+  let name = document.getElementById("playerName").value;
+
+  if (name.trim() === "") {
+    document.getElementById("error").innerText = "Enter your name first!";
+    return;
+  }
+
+  // Save player name
+  localStorage.setItem("playerName", name);
+
+  // Redirect to game page
+  window.location.href = "game.html";
+}
+</script>
+
+</body>
+</html>
