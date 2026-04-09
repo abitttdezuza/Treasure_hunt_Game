@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>You Won</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:green; color:white;">
+
+<h1>🎉 YOU FOUND THE TREASURE!</h1>
+
+<p id="player"></p>
+
+<script>
+let name = localStorage.getItem("player");
+document.getElementById("player").innerText = "Winner: " + name;
+</script>
+
+</body>
+</html>
