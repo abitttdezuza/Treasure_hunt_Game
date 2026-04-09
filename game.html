@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clue 1</title>
+</head>
+<body style="text-align:center; font-family:Arial; background:#111; color:white;">
+
+<h1>🔍 Clue 1</h1>
+<p>I speak without a mouth and hear without ears. What am I?</p>
+
+<input id="answer">
+<br><br>
+<button onclick="check()">Submit</button>
+
+<p id="msg"></p>
+
+<script>
+function check() {
+  let ans = document.getElementById("answer").value.toLowerCase();
+
+  if(ans === "echo") {
+    window.location = "clue2.html";
+  } else {
+    document.getElementById("msg").innerText = "Wrong! Try again.";
+  }
+}
+</script>
+
+</body>
+</html>
